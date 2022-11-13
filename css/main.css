@@ -95,66 +95,44 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*Large Background Image*/
 html {
-  background-color: black;
-  color: white;
+  background-color: #222;
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
   padding: 2em;
-  font-size: 1.25em;
+  color: #fff;
   height: 100%;
 }
 
 .wrapper {
-  /*add display:flex and set justify-content to space-between*/
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  font-weight: 700;
-  alignt-items: center;
-  /* border-top: 3px solid gray;
-  border-bottom: 3px solid gray;
-  padding-top: 4em;
-  padding-bottom: 4em; */
-}
-
-/* h1 {
-  font-size: 3.75em;
-}
-
-p {
-  font-size: 1.75em;
-}
-
-hr {
-
-} */
-
-span {
-  font-weight: bold;
+  align-items: center;
 }
 
 .div-1,
 .div-2,
 .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  height: 300px;
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 2em;
-
+  color: #fff;
+  line-height: 1.5em;
+  font-size: 1.25em;
+  /* width: 30%; */
+  height: auto;
 }
 
-.div-1, .div-2 {
-  border-right: 1px solid gray;
+.wrapper span {
+  font-family: "Lora", sans-serif;
+  font-size: 1.3em;
 }
 
 /* ==========================================================================
@@ -236,15 +214,19 @@ span {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-   @media all and (min-width: 1200px) {
-    .div-1, .div-2, .div-3 {
-      flex-basis: 30%;
-    }
 
-    .div-1, .div-2 {
-      border-right: 1px solid #555;
-      padding-right: 30px;
-    }
+@media all and (min-width: 1200px) {
+  .div-1,
+  .div-2,
+  .div-3 {
+    flex-basis: 30%;
+  }
+
+  .div-1,
+  .div-2 {
+    border-right: 1px solid #555;
+    padding-right: 30px;
+  }
 }
 
 @media print,
